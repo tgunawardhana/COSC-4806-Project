@@ -33,37 +33,18 @@
     </div>
     <br>
     <br>
-    <div class="row">
-        <div class="col-lg-12">
-    
-            <?php if (isset($results) && $results != "" ) { ?>
-                <div class="row">
-                    <div class="col">
-                            <div class="alert alert-success" role="alert">
-                                <h4>Title: <?= $results['Title'] ?></h4>
-                                <h4>Year: <?= $results['Year'] ?></h4>
-                                <h4>Rated: <?= $results['Rated'] ?></h4>
-                                <h4>Released: <?= $results['Released'] ?></h4>
-                                <h4>Runtime: <?= $results['Runtime'] ?></h4>
-                                <h4>Genre: <?= $results['Genre'] ?></h4>
-                                <h4>Director: <?= $results['Director'] ?></h4>
-                                <h4>Writer: <?= $results['Writer'] ?></h4>
-                                <h4>Actors: <?= $results['Actors'] ?></h4>
-                                <h4>Plot: <?= $results['Plot'] ?></h4>
-                                <h4>Language: <?= $results['Language'] ?></h4>
-                                <h4>Country: <?= $results['Country'] ?></h4>
-                                <h4>Awards: <?= $results['Awards'] ?></h4>
-                                <h4>Poster: <?= $results['Poster'] ?></h4>
-                                <h4>Metascore: <?= $results['Metascore'] ?></h4>
-                                <h4>imdbRating: <?= $results['imdbRating'] ?></h4>
-                                <h4>imdbVotes: <?= $results['imdbVotes'] ?></h4>
-                                <h4>imdbID: <?= $results['imdbID']
+    <div class="col-lg-12">
+            <?php foreach ($data['results'] as $result): ?>
+                <?php echo $result['Title'] ?>
+                <br>
+                <?php echo $result['Year'] ?>
+                <br>
+                
+            
+            <br>    
+  
+                                                 
+                <?php endforeach; ?>
 
-                                ?>
-                            </div>
-                        </div>
-                            </div>
-                <?php } ?>               
-        </div>
-    </div>
+            
     <?php require_once 'app/views/templates/footer.php' ?>
