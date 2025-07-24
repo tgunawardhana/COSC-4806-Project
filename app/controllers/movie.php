@@ -8,7 +8,9 @@ class Movie extends Controller {
 
     public function search($title, $year){
         $omdb = $this->model('Omdb');
-        $omdb->search($title, $year);
-        $this->view('movie/index');
+        $results = $omdb->search($title, $year);
+      
+        $this->view('movie/index', ['results' => $results]) ; 
+        
     }
 }
