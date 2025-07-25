@@ -34,20 +34,20 @@
        </form>
 
        
-    </div>
+
     <br>
     <br>
 
     <?php if (isset($data['results']) && $data['results'][0]['Response'] != 'False') { ?>
 
         <?php foreach ($data['results'] as $result): ?>
-        <div class="col-md-10 mx-auto shadow mb-5 bg-body rounded">
+        <div class="col-md-12 shadow mb-5 bg-body rounded">
         <div class="card text-white bg-dark flex-center">
           <div class="row g-0">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <img class="rounded img-fluid" style="height: 100%; object-fit: cover;" src="<?php echo $result['Poster'] ?>" alt="Poster">
             </div>
-          <div class="col-md-6">
+          <div class="col-md-8">
             <div class="card-body">
                 <h1 class="display-4"> <?php echo $result['Title'] ?></h1>
                 <h3 class="display-6 text-muted"> <?php echo $result['Year'] ?> </h3>
@@ -155,7 +155,7 @@
 
     <div>
 
-        <div class="card col-md-10 mx-auto">
+        <div class="card col-md-12">
           <div class="card-body">
             <h5 class="lead">Rate this movie</h5>
             <div class="star-rating animated-stars">
@@ -185,9 +185,9 @@
             </div>
         </div>
 
-    
-  </div>
+                                                                                          
+       <?php } ?>
 
-                                                                                         <?php } ?>
+
     
     <?php require_once 'app/views/templates/footer.php' ?>
