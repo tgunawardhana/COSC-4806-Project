@@ -57,6 +57,12 @@ if (!isset($_SESSION['auth'])) {
       -->
         
       </ul>
+
+  <form class="d-flex" action="/movie/search" method="post" >
+    <input class="form-control me-2" type="search" id="title" name="title" placeholder="Search Movie" aria-label="Search">
+    <button class="btn btn-outline-light" type="submit">Search</button>
+  </form>
+  
     </div>
   </div>
 </nav>
