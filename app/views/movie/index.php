@@ -38,7 +38,6 @@
     <br>
     <br>
 
-
         <?php foreach ($data['results'] as $result): ?>
         <div class="col-md-10 mx-auto shadow mb-5 bg-body rounded">
         <div class="card text-white bg-dark flex-center">
@@ -167,6 +166,7 @@
   
         </div>                                        
                 <?php endforeach; ?>
+
 </div>
 
             
