@@ -178,7 +178,12 @@
                 <div class="row">
                     <div class="col mt-3">
                         <div id="review-content"><?php echo isset($data['review']) ? $data['review'] : '' ?></div>
-                        <div id="loading" style="display: none;">Loading review...</div>
+                        <div id="loading" style="display: none;">
+
+                            <div class="spinner-border" role="status">
+                              <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
               
