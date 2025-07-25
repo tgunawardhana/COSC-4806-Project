@@ -63,11 +63,16 @@
 
       </ul>
         
-          <?php if (isset($_SESSION['username']) && $_SESSION['username'] == 'Admin') {?>
+        <?php if (!isset($_SESSION['auth']) || $_SESSION['auth'] != 1) { ?>
           <li class="d-flex">
             <button class="btn btn-outline-light" onclick="window.location.href='/login'">Log in</button>
           </li>
-          <?php } ?>
+        <?php }
+      else { ?>
+      <li class="d-flex">
+        <button class="btn btn-outline-light" onclick="window.location.href='/logout'">Log out</button>
+      </li>
+            <?php } ?>
     </div>
   </div>
 </nav>
