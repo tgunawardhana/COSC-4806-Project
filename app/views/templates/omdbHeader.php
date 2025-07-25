@@ -65,7 +65,7 @@
 
 
           <li class="d-flex">
-            <button class="btn btn-outline-light" onclick="window.location.href='/login'">Login</button>
+            <button class="btn btn-outline-light" onclick="window.location.href='/login'">Log in</button>
           </li>
           
     </div>

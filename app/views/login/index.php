@@ -24,7 +24,7 @@
 				<input required type="password" class="form-control" name="password">
 			</div>
             <br>
-		    <button type="submit" class="btn btn-primary">Login</button>
+		    <button type="submit" class="btn btn-primary">Log in</button>
 		</fieldset>
 
 			<?php if (isset($success) && $success != ""  ) { ?>
@@ -65,4 +65,6 @@
 	
 	</div>
 </div>
+	</div>
+	</main>
     <?php require_once 'app/views/templates/footer.php' ?>
