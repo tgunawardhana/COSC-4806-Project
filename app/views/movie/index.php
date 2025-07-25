@@ -28,7 +28,7 @@
                 </div>
                 <div class="col">
                     <br>
-                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="submit" class="btn btn-dark">Search</button>
                 </div>
             </div>
        </form>
@@ -41,16 +41,82 @@
         <?php foreach ($data['results'] as $result): ?>
         <div class="container">
           <div class="row">
-            <div class="col">
-                <img src="<?php echo $result['Poster'] ?>" alt="Poster">
+            <div class="col-md-3">
+                <img class="rounded" src="<?php echo $result['Poster'] ?>" alt="Poster">
             </div>
             <div class="col">
-                <h1> <?php echo $result['Title'] ?></h1>
-               
+                <h1 class="display-4"> <?php echo $result['Title'] ?></h1>
+                <h3 class="display-6 text-muted"> <?php echo $result['Year'] ?> </h3>
                 <br>
-                <?php echo $result['Year'] ?>
+                <p class="lead"> <?php echo $result['Plot'] ?> </p>
+                <br>
+                <p class="lead"> <?php echo $result['Actors'] ?> </p>
                 <br>
 
+                <p class="lead"> <?php echo $result['Genre'] ?> </p>
+                <br>
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="row">
+                                <div class="col-sm-1">
+                                    <i class="fa fa-imdb" style="font-size:28px"></i>
+                                </div>
+                                <div class="col">
+                                    <p class="rating">&nbsp; <?php echo $result['imdbRating'] ?> </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-sm-2">
+                            <div class="row">
+                               
+                                <div class="col-sm-1">
+                                    <i class="badge bg-dark" style="font-size:10px;line-height: inherit;font-style: normal;">PG</i>
+                                </div>
+                                <div class="col">
+                                    <p class="rating">&nbsp; <?php echo $result['Rated'] ?> </p>
+                                </div>
+                                    
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-2">
+                            <div class="row">
+                                <div class="col-sm-1">
+                                    <i class="bi bi-clock-fill" style="font-size:22px"></i>
+                                </div>
+                                <div class="col">
+                                    <p class="lead"> &nbsp; <?php echo $result['Runtime'] ?> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                <p class="lead"> <?php echo $result['Director'] ?> </p>
+                <br>
+                
+
+                <p class="lead"> <?php echo $result['Type'] ?> </p>
+                <br>
+
+                <p class="lead"> <?php echo $result['Awards'] ?> </p>
+                <br>
+                <p class="lead"> <?php echo $result['Country'] ?> </p>
+                <br>
+                <p class="lead"> <?php echo $result['Language'] ?> </p>
+                <br>
+
+
+                <p class="lead"> <?php echo $result['Released'] ?> </p>
+                <br>
+
+                <p class="lead"> <?php echo $result['Writer'] ?> </p>
+                <br>
+
+                
 
 
                 
