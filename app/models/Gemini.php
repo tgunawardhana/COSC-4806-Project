@@ -33,12 +33,7 @@ class Gemini {
       if(curl_errno($ch)){
           echo 'Curl error: ' . curl_error($ch);
       }
-      
-      echo "<pre>";
-      print_r($response);
-      die;
-
-     return $response;
+      return $response;
   }
 
 }
