@@ -2,7 +2,12 @@
 <html lang="en">
     <head>
 
+      <link href="app/views/templates/styles.css" rel="stylesheet">
+      <script src="app/views/templates/customjs.js"></script>
+      
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
         <link rel="icon" href="/favicon.png">
         <title>OMDB</title>
@@ -21,16 +26,20 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          <a class="nav-link active" aria-current="page" href="/movie">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/reminders">Reminders</a>
-        </li>
-        <?php if (isset($_SESSION['username']) && $_SESSION['username'] == 'Admin') {?>
-        <li class="nav-item">
-          <a class="nav-link" href="/reports">Reports</a>
-        </li>
+        <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] == '1') {?>  
+            <li class="nav-item">
+              <a class="nav-link" href="/reminders">Reminders</a>
+            </li>
         <?php } ?>
+        <?php if (isset($_SESSION['username']) && $_SESSION['username'] == 'Admin') {?>
+            <li class="nav-item">
+              <a class="nav-link" href="/reports">Reports</a>
+            </li>
+        <?php } ?>
+
+          
 
         <!--
 
@@ -52,6 +61,12 @@
       -->
 
       </ul>
+
+
+          <li class="d-flex">
+            <button class="btn btn-outline-light" onclick="window.location.href='/login'">Login</button>
+          </li>
+          
     </div>
   </div>
 </nav>
