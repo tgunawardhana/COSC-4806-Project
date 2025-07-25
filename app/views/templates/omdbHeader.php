@@ -27,7 +27,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/movie">Home</a>
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
         </li>
         <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] == '1') {?>  
             <li class="nav-item">
@@ -62,12 +62,11 @@
       -->
 
       </ul>
-
-
+           <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] == 1) { ?>
           <li class="d-flex">
             <button class="btn btn-outline-light" onclick="window.location.href='/login'">Log in</button>
           </li>
-          
+          <?php } ?>
     </div>
   </div>
 </nav>
