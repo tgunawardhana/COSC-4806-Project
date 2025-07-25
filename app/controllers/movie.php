@@ -39,11 +39,23 @@ class Movie extends Controller {
         $results = $review->getReview($title);
 
         $results = json_decode($results, true);
-        $results = [$results];
-        $results = $results[0]['candidates'][0]['content']['parts'][0]['text'];
+
+
+        header('Content-Type: application/json');
+
+            if (isset($results['candidates'][0]['content']['parts'][0]['text'])) {
+                echo json_encode([
+                    'success' => true,
+                    'review' => $results['candidates'][0]['content']['parts'][0]['text']
+                ]);
+            } else {
+                echo json_encode([
+                    'success' => false,
+                    'error' => 'Could not get review'
+                ]);
+            }
         
-        $_SESSION['movie_review'] = $results;
-        header("location: /movie");
+    
     }
 
     
