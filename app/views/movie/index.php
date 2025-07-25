@@ -170,10 +170,19 @@
                 <input type="radio" id="star1" name="rating" value="1">
                 <label for="star1" class="bi bi-star-fill"></label>
             </div>
-            <br>
-            <br>
-              <button type="submit" class="btn btn-dark">Get a Review</button>
+                <br>
+                <br>
+                <form method="post" action="/movie/getReview">
+                  <input type="hidden" name="title" value="<?php echo $result['Title'] ?>">
+                  <button type="submit" class="btn btn-dark">Get a Review</button>
+                </form>
 
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <?php echo $data['review'] ?>
+                    </div>
+                </div>
               
             </div>
         </div>

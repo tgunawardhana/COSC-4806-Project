@@ -62,7 +62,7 @@
 			<button type="submit" class="btn btn-secondary">Sign Up</button>
 		</form>
  <br>
-	
+		
 	</div>
 </div>
 	</div>
