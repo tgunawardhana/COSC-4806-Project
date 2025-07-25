@@ -172,15 +172,13 @@
             </div>
                 <br>
                 <br>
-                <form method="post" action="/movie/getReview">
-                  <input type="hidden" name="title" value="<?php echo $result['Title'] ?>">
-                  <button type="submit" class="btn btn-dark">Get a Review</button>
-                </form>
+              <button type="button" class="btn btn-dark" onclick="getReview('<?php echo htmlspecialchars($result['Title'], ENT_QUOTES) ?>')">Get a Review</button>
 
                 <br>
                 <div class="row">
-                    <div class="col">
-                        <?php echo $data['review'] ?>
+                    <div class="col mt-3">
+                        <div id="review-content"><?php echo isset($data['review']) ? $data['review'] : '' ?></div>
+                        <div id="loading" style="display: none;">Loading review...</div>
                     </div>
                 </div>
               
