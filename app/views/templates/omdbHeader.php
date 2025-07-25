@@ -62,7 +62,8 @@
       -->
 
       </ul>
-           <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] == 1) { ?>
+        
+          <?php if (isset($_SESSION['username']) && $_SESSION['username'] == 'Admin') {?>
           <li class="d-flex">
             <button class="btn btn-outline-light" onclick="window.location.href='/login'">Log in</button>
           </li>
