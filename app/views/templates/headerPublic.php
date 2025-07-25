@@ -61,3 +61,25 @@ $success = "";
     <meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
+
+
+
+  <nav class="navbar navbar-expand-sm navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home">COSC 4806</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+
+      <form class="d-flex" action="/movie/search" method="post" >
+        <input class="form-control me-2" type="search" id="title" name="title" placeholder="Search Movie" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+      
+
+
+      </div>
+    </div>
+  </nav>
