@@ -18,7 +18,7 @@ class Movie extends Controller {
     public function search(){
         $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
         $year = filter_input(INPUT_POST, 'year', FILTER_SANITIZE_STRING);
-        $title = "Barbie";
+       // $title = "Barbie";
         $omdb = $this->model('Omdb');
         $results = $omdb->search($title, $year);
         $results = json_decode($results, true);
