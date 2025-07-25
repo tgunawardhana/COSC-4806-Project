@@ -15,7 +15,7 @@ class Gemini {
             array(
                 "parts" => array(
                     array(
-                        "text" => "'Write a reviw for the movie '.$title.'"
+                        "text" => "'Write a reviw for the movie '.$title.' in 100 words based on average ratings and reviews."
                     )
                 )
             )
