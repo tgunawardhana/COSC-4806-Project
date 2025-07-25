@@ -44,7 +44,7 @@
         <div class="col-md-10 mx-auto shadow mb-5 bg-body rounded">
         <div class="card text-white bg-dark flex-center">
           <div class="row g-0">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <img class="rounded img-fluid" style="height: 100%; object-fit: cover;" src="<?php echo $result['Poster'] ?>" alt="Poster">
             </div>
           <div class="col-md-6">
@@ -138,26 +138,7 @@
                         <label class="text-muted">Released</label>
                         <p class=""> <?php echo $result['Released'] ?> </p>
                     </div>
-                <div>
-
-
-                    <div >
-                        <h5 class="lead">Rate this movie</h5>
-                        <div class="star-rating animated-stars">
-                            <input type="radio" id="star5" name="rating" value="5">
-                            <label for="star5" class="bi bi-star-fill"></label>
-                            <input type="radio" id="star4" name="rating" value="4">
-                            <label for="star4" class="bi bi-star-fill"></label>
-                            <input type="radio" id="star3" name="rating" value="3">
-                            <label for="star3" class="bi bi-star-fill"></label>
-                            <input type="radio" id="star2" name="rating" value="2">
-                            <label for="star2" class="bi bi-star-fill"></label>
-                            <input type="radio" id="star1" name="rating" value="1">
-                            <label for="star1" class="bi bi-star-fill"></label>
-                        </div>
-                        <p class="text-muted mt-2">Click to rate</p>
-                    </div>
-               
+                <div>              
                 
             </div>
           </div>
@@ -168,9 +149,38 @@
   
         </div>                                        
                 <?php endforeach; ?>
-                <?php } ?>
-
+                        
 </div>
+    <br>
 
-            
+    <div>
+
+        <div class="card col-md-10 mx-auto">
+          <div class="card-body">
+            <h5 class="lead">Rate this movie</h5>
+            <div class="star-rating animated-stars">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5" class="bi bi-star-fill"></label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" class="bi bi-star-fill"></label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" class="bi bi-star-fill"></label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" class="bi bi-star-fill"></label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" class="bi bi-star-fill"></label>
+            </div>
+            <br>
+            <br>
+              <button type="submit" class="btn btn-dark">Get a Review</button>
+
+              
+            </div>
+        </div>
+
+    
+  </div>
+
+                                                                                         <?php } ?>
+    
     <?php require_once 'app/views/templates/footer.php' ?>
