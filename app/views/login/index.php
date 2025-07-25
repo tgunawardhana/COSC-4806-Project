@@ -65,6 +65,6 @@
 		
 	</div>
 </div>
-	</div>
-	</main>
+
+
     <?php require_once 'app/views/templates/footer.php' ?>
